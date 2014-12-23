@@ -55,6 +55,7 @@ PRODUCT_COPY_FILES := \
     vendor/motorola/shamu/proprietary/bin/usbhub_init:system/bin/usbhub_init \
     vendor/motorola/shamu/proprietary/etc/Bluetooth_cal.acdb:system/etc/Bluetooth_cal.acdb \
     vendor/motorola/shamu/proprietary/etc/flp.conf:system/etc/flp.conf \
+    vendor/motorola/shamu/proprietary/etc/fmas_eq.dat:system/etc/fmas_eq.dat \
     vendor/motorola/shamu/proprietary/etc/General_cal.acdb:system/etc/General_cal.acdb \
     vendor/motorola/shamu/proprietary/etc/Global_cal.acdb:system/etc/Global_cal.acdb \
     vendor/motorola/shamu/proprietary/etc/Handset_cal.acdb:system/etc/Handset_cal.acdb \
@@ -102,15 +103,20 @@ PRODUCT_COPY_FILES := \
     vendor/motorola/shamu/proprietary/lib/libmm-qcamera.so:system/lib/libmm-qcamera.so \
     vendor/motorola/shamu/proprietary/lib/librecoglib.so:system/lib/librecoglib.so \
     vendor/motorola/shamu/proprietary/lib/librmnetctl.so:system/lib/librmnetctl.so \
+    vendor/motorola/shamu/proprietary/lib/libflacencoder.so:system/lib/libflacencoder.so \
+    vendor/motorola/shamu/proprietary/lib/libmotaudioutils.so:system/lib/libmotaudioutils.so \
     vendor/motorola/shamu/proprietary/lib/libtinycompress.so:system/lib/libtinycompress.so \
     vendor/motorola/shamu/proprietary/lib/libsupermodel.so:system/lib/libsupermodel.so \
+    vendor/motorola/shamu/proprietary/lib/hw/audio.motvr.default.so:system/lib/hw/audio.motvr.default.so \
     vendor/motorola/shamu/proprietary/lib/hw/audio.primary.msm8084.so:system/lib/hw/audio.primary.msm8084.so \
     vendor/motorola/shamu/proprietary/lib/hw/gps.msm8084.so:system/lib/hw/gps.msm8084.so \
     vendor/motorola/shamu/proprietary/lib/hw/sound_trigger.primary.shamu.so:system/lib/hw/sound_trigger.primary.shamu.so \
+    vendor/motorola/shamu/proprietary/lib/soundfx/libfmas.so:system/lib/soundfx/libfmas.so \
     vendor/motorola/shamu/proprietary/lib/soundfx/libqcomvisualizer.so:system/lib/soundfx/libqcomvisualizer.so \
     vendor/motorola/shamu/proprietary/lib/soundfx/libqcomvoiceprocessing.so:system/lib/soundfx/libqcomvoiceprocessing.so \
     vendor/motorola/shamu/proprietary/lib/soundfx/libspeakerbundle.so:system/lib/soundfx/libspeakerbundle.so \
     vendor/motorola/shamu/proprietary/vendor/bin/gsiff_daemon:system/vendor/bin/gsiff_daemon \
+    vendor/motorola/shamu/proprietary/vendor/etc/audio_effects.conf:system/vendor/etc/audio_effects.conf \
     vendor/motorola/shamu/proprietary/vendor/firmware/a420_pfp.fw:system/vendor/firmware/a420_pfp.fw \
     vendor/motorola/shamu/proprietary/vendor/firmware/a420_pm4.fw:system/vendor/firmware/a420_pm4.fw \
     vendor/motorola/shamu/proprietary/vendor/firmware/adsp.b00:system/vendor/firmware/adsp.b00 \
@@ -133,22 +139,28 @@ PRODUCT_COPY_FILES := \
     vendor/motorola/shamu/proprietary/vendor/firmware/atmel-a432-14101503-0103aa-shamu.tdat:system/vendor/firmware/atmel-a432-14101503-0103aa-shamu.tdat \
     vendor/motorola/shamu/proprietary/vendor/firmware/bcm20795_firmware.ncd:system/vendor/firmware/bcm20795_firmware.ncd \
     vendor/motorola/shamu/proprietary/vendor/firmware/bcm4354A2.hcd:system/vendor/firmware/bcm4354A2.hcd \
+    vendor/motorola/shamu/proprietary/vendor/firmware/left.boost.music.config:system/vendor/firmware/left.boost.music.config \
     vendor/motorola/shamu/proprietary/vendor/firmware/left.boost.music.eq:system/vendor/firmware/left.boost.music.eq \
     vendor/motorola/shamu/proprietary/vendor/firmware/left.boost_music_table.preset:system/vendor/firmware/left.boost_music_table.preset \
     vendor/motorola/shamu/proprietary/vendor/firmware/left.boost_n1b12.patch:system/vendor/firmware/left.boost_n1b12.patch \
     vendor/motorola/shamu/proprietary/vendor/firmware/left.boost_n1c2.patch:system/vendor/firmware/left.boost_n1c2.patch \
+    vendor/motorola/shamu/proprietary/vendor/firmware/left.boost.ringtone.config:system/vendor/firmware/left.boost.ringtone.config \
     vendor/motorola/shamu/proprietary/vendor/firmware/left.boost.ringtone.eq:system/vendor/firmware/left.boost.ringtone.eq \
     vendor/motorola/shamu/proprietary/vendor/firmware/left.boost_ringtone_table.preset:system/vendor/firmware/left.boost_ringtone_table.preset \
     vendor/motorola/shamu/proprietary/vendor/firmware/left.boost.speaker:system/vendor/firmware/left.boost.speaker \
+    vendor/motorola/shamu/proprietary/vendor/firmware/left.boost.voice.config:system/vendor/firmware/left.boost.voice.config \
     vendor/motorola/shamu/proprietary/vendor/firmware/left.boost.voice.eq:system/vendor/firmware/left.boost.voice.eq \
     vendor/motorola/shamu/proprietary/vendor/firmware/left.boost_voice_table.preset:system/vendor/firmware/left.boost_voice_table.preset \
+    vendor/motorola/shamu/proprietary/vendor/firmware/right.boost.music.config:system/vendor/firmware/right.boost.music.config \
     vendor/motorola/shamu/proprietary/vendor/firmware/right.boost.music.eq:system/vendor/firmware/right.boost.music.eq \
     vendor/motorola/shamu/proprietary/vendor/firmware/right.boost_music_table.preset:system/vendor/firmware/right.boost_music_table.preset \
     vendor/motorola/shamu/proprietary/vendor/firmware/right.boost_n1b12.patch:system/vendor/firmware/right.boost_n1b12.patch \
     vendor/motorola/shamu/proprietary/vendor/firmware/right.boost_n1c2.patch:system/vendor/firmware/right.boost_n1c2.patch \
+    vendor/motorola/shamu/proprietary/vendor/firmware/right.boost.ringtone.config:system/vendor/firmware/right.boost.ringtone.config \
     vendor/motorola/shamu/proprietary/vendor/firmware/right.boost.ringtone.eq:system/vendor/firmware/right.boost.ringtone.eq \
     vendor/motorola/shamu/proprietary/vendor/firmware/right.boost_ringtone_table.preset:system/vendor/firmware/right.boost_ringtone_table.preset \
     vendor/motorola/shamu/proprietary/vendor/firmware/right.boost.speaker:system/vendor/firmware/right.boost.speaker \
+    vendor/motorola/shamu/proprietary/vendor/firmware/right.boost.voice.config:system/vendor/firmware/right.boost.voice.config \
     vendor/motorola/shamu/proprietary/vendor/firmware/right.boost.voice.eq:system/vendor/firmware/right.boost.voice.eq \
     vendor/motorola/shamu/proprietary/vendor/firmware/right.boost_voice_table.preset:system/vendor/firmware/right.boost_voice_table.preset \
     vendor/motorola/shamu/proprietary/vendor/firmware/venus.b00:system/vendor/firmware/venus.b00 \
@@ -343,9 +355,14 @@ PRODUCT_COPY_FILES := \
     vendor/motorola/shamu/proprietary/vendor/lib/libsensor_reg.so:system/vendor/lib/libsensor_reg.so \
     vendor/motorola/shamu/proprietary/vendor/lib/libthermalclient.so:system/vendor/lib/libthermalclient.so \
     vendor/motorola/shamu/proprietary/vendor/lib/libthermalioctl.so:system/vendor/lib/libthermalioctl.so \
-    vendor/motorola/shamu/proprietary/vendor/lib/libtime_genoff.so:system/vendor/lib/libtime_genoff.so \
     vendor/motorola/shamu/proprietary/vendor/lib/libTimeService.so:system/vendor/lib/libTimeService.so \
+    vendor/motorola/shamu/proprietary/vendor/lib/libwvdrm_L1.so:system/vendor/lib/libwvdrm_L1.so \
+    vendor/motorola/shamu/proprietary/vendor/lib/libwvm.so:system/vendor/lib/libwvm.so \
+    vendor/motorola/shamu/proprietary/vendor/lib/libWVphoneAPI.so:system/vendor/lib/libWVphoneAPI.so \
+    vendor/motorola/shamu/proprietary/vendor/lib/libWVStreamControlAPI_L1.so:system/vendor/lib/libWVStreamControlAPI_L1.so \
     vendor/motorola/shamu/proprietary/vendor/lib/libxml.so:system/vendor/lib/libxml.so \
+    vendor/motorola/shamu/proprietary/vendor/lib/drm/libdrmwvmplugin.so:system/vendor/lib/drm/libdrmwvmplugin.so \
+    vendor/motorola/shamu/proprietary/vendor/lib/mediadrm/libwvdrmengine.so:system/vendor/lib/mediadrm/libwvdrmengine.so \
     vendor/motorola/shamu/proprietary/vendor/moto/audiomonitor/sensory/lts_en_us_9_5_2b.raw:system/vendor/moto/audiomonitor/sensory/lts_en_us_9_5_2b.raw \
     vendor/motorola/shamu/proprietary/vendor/moto/audiomonitor/sensory/nn_de_mfcc_16k_15_big_250_v3_4.raw:system/vendor/moto/audiomonitor/sensory/nn_de_mfcc_16k_15_big_250_v3_4.raw \
     vendor/motorola/shamu/proprietary/vendor/moto/audiomonitor/sensory/nn_en_uk_mfcc_16k_15_big_250_v2_2.raw:system/vendor/moto/audiomonitor/sensory/nn_en_uk_mfcc_16k_15_big_250_v2_2.raw \
@@ -363,7 +380,7 @@ PRODUCT_COPY_FILES := \
     vendor/motorola/shamu/proprietary/vendor/moto/audiomonitor/sensory/phonemesearch_esus_1_2.raw:system/vendor/moto/audiomonitor/sensory/phonemesearch_esus_1_2.raw \
     vendor/motorola/shamu/proprietary/vendor/moto/audiomonitor/sensory/phonemesearch_frca_prec1_1_0.raw:system/vendor/moto/audiomonitor/sensory/phonemesearch_frca_prec1_1_0.raw \
     vendor/motorola/shamu/proprietary/vendor/moto/audiomonitor/sensory/phonemesearch_frfr_1_1.raw:system/vendor/moto/audiomonitor/sensory/phonemesearch_frfr_1_1.raw \
-     vendor/motorola/shamu/proprietary/vendor/moto/audiomonitor/sensory/phonemesearch_it_it_1_0.raw:system/vendor/moto/audiomonitor/sensory/phonemesearch_it_it_1_0.raw \
+    vendor/motorola/shamu/proprietary/vendor/moto/audiomonitor/sensory/phonemesearch_it_it_1_0.raw:system/vendor/moto/audiomonitor/sensory/phonemesearch_it_it_1_0.raw \
     vendor/motorola/shamu/proprietary/vendor/moto/audiomonitor/sensory/phonemesearch_ptbr_1_0.raw:system/vendor/moto/audiomonitor/sensory/phonemesearch_ptbr_1_0.raw \
     vendor/motorola/shamu/proprietary/vendor/moto/audiomonitor/sensory/svsid_dede_1_0.raw:system/vendor/moto/audiomonitor/sensory/svsid_dede_1_0.raw \
     vendor/motorola/shamu/proprietary/vendor/moto/audiomonitor/sensory/svsid_enuk_1_0.raw:system/vendor/moto/audiomonitor/sensory/svsid_enuk_1_0.raw \
